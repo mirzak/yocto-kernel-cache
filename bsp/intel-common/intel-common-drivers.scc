@@ -11,10 +11,6 @@ include intel-common.scc
 kconf hardware bsp/common-pc/common-pc-drivers.cfg
 kconf hardware bsp/common-pc/common-pc-eth.cfg
 kconf hardware bsp/common-pc/common-pc-gfx.cfg
-kconf hardware bsp/common-pc/common-pc-wifi.cfg
-
-# OSS sound support
-include cfg/sound.scc
 
 # PCI
 include features/pci/pci.scc
@@ -24,8 +20,6 @@ include features/usb/ehci-hcd.scc
 include features/usb/uhci-hcd.scc
 include features/usb/ohci-hcd.scc
 include features/usb/xhci-hcd.scc
-include features/usb/usb-gadgets.scc
-include features/usb/touchscreen-composite.scc
 include features/usb-net/usb-net.scc
 
 include cfg/timer/hpet.scc
@@ -43,25 +37,8 @@ include features/iwlwifi/iwlwifi.scc
 include features/iwlegacy/iwlegacy.scc
 include features/i40e/i40e.scc
 
-# Various RF/Wireless technologies
-include features/nfc/nfc.scc
-include features/nfc/nfc-generic.scc
-include features/nfc/nfc-vendor.scc
-include features/bluetooth/bluetooth.scc
-include features/bluetooth/bluetooth-usb.scc
-include features/ieee802154/ieee802154.scc
-
-# Various media device support, like webcams and capture cards
-include features/media/media-all.scc
-
-# Industrial IO Support
-include features/iio/iio.scc
-
 # TPM
 include features/tpm/tpm.scc
-
-# Intel HD Audio
-include features/sound/snd_hda_intel.scc
 
 # Intel technology
 include features/mei/amt.scc
